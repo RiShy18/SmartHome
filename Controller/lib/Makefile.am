@@ -1,0 +1,9 @@
+lib_LTLIBRARIES = libgpio.la libtools.la libmqttClient.la
+include_HEADERS = $(top_srcdir)/include/gpio.h $(top_srcdir)/include/tools.h $(top_srcdir)/include/mqttClient.h
+AM_CPPFLAGS = -I$(top_srcdir)/include
+libgpio_la_SOURCES = gpio.c
+libgpio_la_LDFLAGS = -shared
+libtools_la_SOURCES = tools.c
+libtools_la_LDFLAGS = -shared
+libmqttClient_la_SOURCES = mqttClient.c
+libmqttClient_la_LDFLAGS = -shared
